@@ -1,0 +1,1006 @@
+{
+	"info": {
+		"_postman_id": "f1d526f3-243c-4130-a7cb-6311bd4cb27f",
+		"name": "Instagram application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"vidhun@gmail.com\",\n    \"username\":\"vidhun\",\n    \"password\":\"vidhun123\",\n    \"confirmpassword\":\"vidhun123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"vidhun@gmail.com\",\n    \"username\":\"vidhun\",\n    \"password\":\"vidhun123\",\n    \"confirmpassword\":\"vidhun123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "285"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11d-i0cLKm0Oriw7dN2ZnwlECh5VxzE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 05:46:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"vidhun@gmail.com\",\n    \"username\": \"vidhun\",\n    \"password\": \"$2b$10$1i1jzdgvadpk3ydnothh7erzd/kxkktkdr.hp7cypr6ovsnb322cy\",\n    \"confirmpassword\": \"$2b$10$1i1jzdgvadpk3ydnothh7erzd/kxkktkdr.hp7cypr6ovsnb322cy\",\n    \"otp\": 4171,\n    \"followers\": [],\n    \"following\": [],\n    \"_id\": \"626787490fb693bf219fdc8b\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "OTP verification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/otpverify/4171",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"otpverify",
+								"4171"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OTP verification",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/user/otpverify/4171",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"otpverify",
+										"4171"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-CaqvLPLBpsIi/gXDjlV2kKw02NQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 05:52:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "You has been successfully registered"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"vidhun@gmail.com\",\n    \"password\":\"vidhun123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"vidhun@gmail.com\",\n    \"password\":\"vidhun123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8e-l9DQmvoxfUzgtLgpuwmCwOY5xgo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 06:25:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"login sucess\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTA5NTQzMTR9.Y8-Se9DSxQAQJWqgIbcm2KwW-QE2oRYaczkcTc9-XVw\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Follow",
+			"item": [
+				{
+					"name": "Follow user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTA5NTQzMTR9.Y8-Se9DSxQAQJWqgIbcm2KwW-QE2oRYaczkcTc9-XVw",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"followers\":1,\n    \"following\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/6267be061317f3f926226ce2/626787490fb693bf219fdc8b/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"6267be061317f3f926226ce2",
+								"626787490fb693bf219fdc8b",
+								"follow"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Follow user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTA5NTQzMTR9.Y8-Se9DSxQAQJWqgIbcm2KwW-QE2oRYaczkcTc9-XVw",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"followers\":1,\n    \"following\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/6267be061317f3f926226ce2/626787490fb693bf219fdc8b/follow",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"6267be061317f3f926226ce2",
+										"626787490fb693bf219fdc8b",
+										"follow"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-3aSbbxMvxv5xG0eTNE2ehhHuQso\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 09:57:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"followed sucessfully\",\n    \"result\": [\n        {\n            \"_id\": \"6267be061317f3f926226ce2\",\n            \"email\": \"ramesh@gmail.com\",\n            \"username\": \"ramesh\",\n            \"followers\": [],\n            \"following\": [\n                \"626787490fb693bf219fdc8b\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Unfollow user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/626176d5d5f6ffc25070bfc1/626176fdd5f6ffc25070bfc3/unfollow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"626176d5d5f6ffc25070bfc1",
+								"626176fdd5f6ffc25070bfc3",
+								"unfollow"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unfollow user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/user/626176d5d5f6ffc25070bfc1/626176fdd5f6ffc25070bfc3/unfollow",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"626176d5d5f6ffc25070bfc1",
+										"626176fdd5f6ffc25070bfc3",
+										"unfollow"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-ireTM2ajtNW8qFXKktWM74kmlcU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 10:19:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"unfollowed sucessfully\",\n    \"result\": [\n        {\n            \"_id\": \"626176d5d5f6ffc25070bfc1\",\n            \"email\": \"jawahar@gmail.com\",\n            \"username\": \"jawahar\",\n            \"followers\": [],\n            \"following\": []\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Post creation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postname\":\"Nodejs\",\n    \"postcontent\":\"Node. js (Node) is an open source development platform for executing JavaScript code server-side\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/626787490fb693bf219fdc8b/postcreation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"626787490fb693bf219fdc8b",
+								"postcreation"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"postname\":\"Nodejs\",\n    \"postcontent\":\"Node. js (Node) is an open source development platform for executing JavaScript code server-side\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/626787490fb693bf219fdc8b/postcreation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"626787490fb693bf219fdc8b",
+										"postcreation"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "465"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d1-CftcWwEFPknvcukgViZWaTX/QTM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 12:04:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"post created sucessfully\",\n    \"result\": {\n        \"postname\": \"Nodejs\",\n        \"postcontent\": \"Node. js (Node) is an open source development platform for executing JavaScript code server-side\",\n        \"photo\": \"no photo\",\n        \"postedBy\": {\n            \"_id\": \"626787490fb693bf219fdc8b\",\n            \"email\": \"vidhun@gmail.com\",\n            \"username\": \"vidhun\",\n            \"followers\": [\n                \"6267be061317f3f926226ce2\"\n            ],\n            \"following\": []\n        },\n        \"likes\": 0,\n        \"likedby\": [],\n        \"commentby\": [],\n        \"_id\": \"6267dfe28a83fdde7476c173\",\n        \"create\": \"2022-04-26T12:04:50.096Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Post creation Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"postname\":\"yoga\",\n    \"postcontent\":\"It is an art of healthy living\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/626787490fb693bf219fdc8b/postcreation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"626787490fb693bf219fdc8b",
+										"postcreation"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "423"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a7-wsAM1N95kI5CjTeTJoSklt5UNlw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 12:11:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"post created sucessfully\",\n    \"result\": {\n        \"postname\": \"yoga\",\n        \"postcontent\": \"It is an art of healthy living\",\n        \"photo\": \"no photo\",\n        \"postedBy\": {\n            \"_id\": \"626787490fb693bf219fdc8b\",\n            \"email\": \"vidhun@gmail.com\",\n            \"username\": \"vidhun\",\n            \"followers\": [\n                \"6267be061317f3f926226ce2\"\n            ],\n            \"following\": [\n                \"6267be061317f3f926226ce2\"\n            ]\n        },\n        \"likes\": 0,\n        \"likedby\": [],\n        \"commentby\": [],\n        \"_id\": \"6267e1588a83fdde7476c17c\",\n        \"create\": \"2022-04-26T12:11:04.586Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Likes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postname\":\"yoga\",\n    \"postcontent\":\"It is an art of healthy living\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/6267be061317f3f926226ce2/6267e1588a83fdde7476c17c/likes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"6267be061317f3f926226ce2",
+								"6267e1588a83fdde7476c17c",
+								"likes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Likes",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"postname\":\"yoga\",\n    \"postcontent\":\"It is an art of healthy living\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/6267be061317f3f926226ce2/6267e1588a83fdde7476c17c/likes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"6267be061317f3f926226ce2",
+										"6267e1588a83fdde7476c17c",
+										"likes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-87NsoxS9X5Gjm4+2Hvr0CSpclPc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 12:37:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Like updated sucessfully\",\n    \"result\": {\n        \"_id\": \"6267e1588a83fdde7476c17c\",\n        \"postname\": \"yoga\",\n        \"postcontent\": \"It is an art of healthy living\",\n        \"photo\": \"no photo\",\n        \"postedBy\": \"626787490fb693bf219fdc8b\",\n        \"likes\": 1,\n        \"commentby\": [],\n        \"create\": \"2022-04-26T12:11:04.586Z\",\n        \"__v\": 0,\n        \"likedby\": [\n            \"6267be061317f3f926226ce2\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Unlike",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/6267be061317f3f926226ce2/6267e1588a83fdde7476c17c/unlike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"6267be061317f3f926226ce2",
+								"6267e1588a83fdde7476c17c",
+								"unlike"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unlike",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/user/6267be061317f3f926226ce2/6267e1588a83fdde7476c17c/unlike",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"6267be061317f3f926226ce2",
+										"6267e1588a83fdde7476c17c",
+										"unlike"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"120-acuMdaHFIjCKW6Nudu09W2SVLPQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 12:38:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"unlike updated sucessfully\",\n    \"result\": {\n        \"likedby\": [],\n        \"_id\": \"6267e1588a83fdde7476c17c\",\n        \"postname\": \"yoga\",\n        \"postcontent\": \"It is an art of healthy living\",\n        \"photo\": \"no photo\",\n        \"postedBy\": \"626787490fb693bf219fdc8b\",\n        \"likes\": 0,\n        \"commentby\": [],\n        \"create\": \"2022-04-26T12:11:04.586Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Comments",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\":\"your post is very useful for us \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/yoga/6267be061317f3f926226ce2/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"yoga",
+								"6267be061317f3f926226ce2",
+								"comment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Comment",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\":\"your post is very useful for us \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/user/yoga/6267be061317f3f926226ce2/comment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"yoga",
+										"6267be061317f3f926226ce2",
+										"comment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"101-1F/gj8k9sg8jeaFb5e2raE8n8QE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 12:54:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"comment updated sucessfully\",\n    \"result\": {\n        \"photo\": \"no photo\",\n        \"likes\": 0,\n        \"likedby\": [],\n        \"comment\": \"your post is very useful for us \",\n        \"commentby\": [\n            \"6267be061317f3f926226ce2\"\n        ],\n        \"_id\": \"6267eb7f74eac912bcc3cfe0\",\n        \"create\": \"2022-04-26T12:54:23.395Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Find the Particular Userdetails and post details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/626787490fb693bf219fdc8b/finddetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"626787490fb693bf219fdc8b",
+								"finddetails"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find the Particular Userdetails and post details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/user/626787490fb693bf219fdc8b/finddetails",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"626787490fb693bf219fdc8b",
+										"finddetails"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ce-2BQ5in1Cm2wY/IFIBlIYCYqbv6s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 13:07:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"user details here\",\n    \"result\": [\n        {\n            \"_id\": \"626787490fb693bf219fdc8b\",\n            \"email\": \"vidhun@gmail.com\",\n            \"username\": \"vidhun\",\n            \"followers\": [\n                \"6267be061317f3f926226ce2\"\n            ],\n            \"following\": [\n                \"6267be061317f3f926226ce2\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

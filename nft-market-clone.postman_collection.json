@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "82196df6-81cd-4924-b8d1-8c486e1b0632",
+		"name": "nft-market-clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"name\":\"aravindh\",\r\n\"walletaddress\":\"aravi123\",\r\n\"email\":\"aravindh@gmail.com\",\r\n\"adminpassword\":12345,\r\n\"password\":\"aravi12345\",\r\n\"profilephoto\":\"aravindh.jpg\",\r\n\"status\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user signup(not admin)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\"name\":\"mohana\",\r\n\"walletaddress\":\"mohanai123\",\r\n\"email\":\"mohana@gmail.com\",\r\n\"adminpassword\":1245,\r\n\"profilephoto\":\"mohana.jpg\",\r\n\"status\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "156"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9c-R+yuiD8KIyKsVBhkRQnacu+RCI0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 06:54:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"mohana\",\n    \"walletaddress\": \"mohanai123\",\n    \"email\": \"mohana@gmail.com\",\n    \"profilephoto\": \"mohana.jpg\",\n    \"status\": true,\n    \"_id\": \"628f24120ae3ea93d501b8c9\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "user signup(admin)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\"name\":\"aravindh\",\r\n\"walletaddress\":\"aravi123\",\r\n\"email\":\"aravindh@gmail.com\",\r\n\"adminpassword\":12345,\r\n\"password\":\"aravi12345\",\r\n\"profilephoto\":\"aravindh.jpg\",\r\n\"status\":true}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "249"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f9-jgKxA0jTRsjNyoGKa8q9d4N5o0Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 07:49:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"aravindh\",\n    \"walletaddress\": \"aravi123\",\n    \"email\": \"aravindh@gmail.com\",\n    \"password\": \"$2b$10$d3H3ps9waGAxcPrzmI.zs.mgB8qhX.C3UK6qp6zMv1641s0Jo6buq\",\n    \"role\": \"admin\",\n    \"profilephoto\": \"aravindh.jpg\",\n    \"status\": true,\n    \"_id\": \"628f310ba63844a0b6630e0b\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"walletaddress\":\"aravi123\",\r\n\"password\":\"aravi12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login(admintoken)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"walletaddress\":\"aravi123\",\r\n\"password\":\"aravi12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "303"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f-cZBjKh4TO2g2n3IVoC+UgzBzq9s\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 09:28:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Auth Successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU1NzMwOSwiZXhwIjoxNjUzNTYwOTA5fQ.GcObMqC1HsjYagJicGA9Gdyg7YuPsWjfzDXaKb1oTxA\"\n}"
+						},
+						{
+							"name": "login(user token)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"walletaddress\":\"mohanai123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-JEc/ZYbiX8RJP4lWFLVGcwPINlY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 09:31:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Auth Successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoibW9oYW5haTEyMyIsImlhdCI6MTY1MzU1NzUwNCwiZXhwIjoxNjUzNTYxMTA0fQ.sTcpOZzsgGaAQk4Kir0XWFMXU4P-Op1E7A0cGFUDsqc\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "pending collection list to accept",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU1ODMzMCwiZXhwIjoxNjUzNTYxOTMwfQ.7m2yNs3zozhZEitivSIk1n1AiU1ter9huXgdQnWRHJY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/admin/pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"pending"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pending collection list to accept(using admin sign in)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU1ODMzMCwiZXhwIjoxNjUzNTYxOTMwfQ.7m2yNs3zozhZEitivSIk1n1AiU1ter9huXgdQnWRHJY",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/pending",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"pending"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-bxKJU998EHuPFejsbZlvJhW/FeU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 09:50:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"628f4a47af57c81a1d6a3dd8\",\n        \"name\": \"priyacollection\",\n        \"creatorName\": \"priya\",\n        \"collectionImage\": \"toy.png\",\n        \"status\": \"pending\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"628f4c8cc35df68c6ef0ab28\",\n        \"name\": \"priyacollection\",\n        \"creatorName\": \"priya\",\n        \"collectionImage\": \"toy.png\",\n        \"status\": \"pending\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "accepting a collection by admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU2MDA1NywiZXhwIjoxNjUzNTYzNjU3fQ.49Xou7MduIgR970R_86_CWCVsoY2HwL2Q_lL045hTwQ",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/admin/accept/628f5c474cccbb7260a92259",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"accept",
+								"628f5c474cccbb7260a92259"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "accepting a collection by admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU2MDA1NywiZXhwIjoxNjUzNTYzNjU3fQ.49Xou7MduIgR970R_86_CWCVsoY2HwL2Q_lL045hTwQ",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/accept/628f5c474cccbb7260a92259",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"accept",
+										"628f5c474cccbb7260a92259"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13-h9YYak61I4LIhs7sSSf1WElkVt0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 11:03:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "collection accepted"
+						}
+					]
+				},
+				{
+					"name": "collection rejected by admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU2MjQ2NSwiZXhwIjoxNjUzNTY2MDY1fQ.s9WcPOD33tuQdFHHKFAyH_tdnJlu5tGQthqgzcyfLuk",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/admin/reject/628f4c8cc35df68c6ef0ab28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"reject",
+								"628f4c8cc35df68c6ef0ab28"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "collection rejected by admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoiYXJhdmkxMjMiLCJwYXNzd29yZCI6IiQyYiQxMCRUOHowVHc0RklJNVBiZTIuRUtSNUhPY2I0Z0ZXdzQ3bU9iN3UuNG84ZS5Id3JVNDk1T1JyLiIsImlhdCI6MTY1MzU2MjQ2NSwiZXhwIjoxNjUzNTY2MDY1fQ.s9WcPOD33tuQdFHHKFAyH_tdnJlu5tGQthqgzcyfLuk",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/admin/reject/628f4c8cc35df68c6ef0ab28",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"admin",
+										"reject",
+										"628f4c8cc35df68c6ef0ab28"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13-2T9s9N0tsKTy/s5cE6IwEaQgc5U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 11:00:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "collection rejected"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "collection",
+			"item": [
+				{
+					"name": "create collection by user auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoibW9oYW5haTEyMyIsImlhdCI6MTY1MzU1Nzc5NiwiZXhwIjoxNjUzNTYxMzk2fQ.82wZMY5tyeulTn7olvd80nmb63C_0VMazWBgNuEDuB8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"priyacollection\",\r\n\"creatorName\":\"priya\",\r\n\"collectionImage\":\"toy.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/collection/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"collection",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create collection by user auth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoibW9oYW5haTEyMyIsImlhdCI6MTY1MzU1Nzc5NiwiZXhwIjoxNjUzNTYxMzk2fQ.82wZMY5tyeulTn7olvd80nmb63C_0VMazWBgNuEDuB8",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"name\":\"priyacollection\",\r\n\"creatorName\":\"priya\",\r\n\"collectionImage\":\"toy.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/collection/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"collection",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-gxJmSZW+CoH/6x010qg9jum525E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 May 2022 09:46:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"priyacollection\",\n    \"creatorName\": \"priya\",\n    \"collectionImage\": \"toy.png\",\n    \"status\": \"pending\",\n    \"_id\": \"628f4c8cc35df68c6ef0ab28\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "nft",
+			"item": [
+				{
+					"name": "nft creation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoidmlkaHVuMTIzIiwiaWF0IjoxNjUzNDc2ODg3LCJleHAiOjE2NTM0ODA0ODd9.avFOIbeopHdyIrdrB80YjtJzsZVn7yckiCuTh3hFdDo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"nature\",\r\n\"description\":\"beauty\",\r\n\"nftImage\":\"nature.png\",\r\n\"nftCollection\":\"priyacollection\",\r\n\"status\":true,\r\n\"price\":\"3000\",\r\n\"isSold\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/nft/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"nft",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "nft creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3YWxsZXRhZGRyZXNzIjoidmlkaHVuMTIzIiwiaWF0IjoxNjUzNDc2ODg3LCJleHAiOjE2NTM0ODA0ODd9.avFOIbeopHdyIrdrB80YjtJzsZVn7yckiCuTh3hFdDo",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"name\":\"nature\",\r\n\"description\":\"beauty\",\r\n\"nftImage\":\"nature.png\",\r\n\"nftCollection\":\"priyacollection\",\r\n\"status\":true,\r\n\"price\":\"3000\",\r\n\"isSold\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/nft/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"nft",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d0-MCu8h9t29GeLk8y+DLwf9RY10pU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 May 2022 10:32:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"nature\",\n    \"description\": \"nature\",\n    \"nftImage\": \"nature.png\",\n    \"nftCollection\": [\n        \"6295edd6652096d0b4a41fb7\"\n    ],\n    \"status\": true,\n    \"price\": 3000,\n    \"isSold\": true,\n    \"saleType\": \"buy\",\n    \"_id\": \"6295eed2ccfcbc55b4aecafb\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "bid",
+			"item": [
+				{
+					"name": "auction an nft",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startingtime\":\"2022-05-31T10:50:21.013+00:00\",\r\n    \"endingtime\":\"2022-05-31T11:50:21.013+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/bid/auction/6295eea0ccfcbc55b4aecaf8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"bid",
+								"auction",
+								"6295eea0ccfcbc55b4aecaf8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "auction an nft",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startingtime\":\"2022-05-31T10:50:21.013+00:00\",\r\n    \"endingtime\":\"2022-05-31T11:50:21.013+00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/bid/auction/6295eea0ccfcbc55b4aecaf8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"bid",
+										"auction",
+										"6295eea0ccfcbc55b4aecaf8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "338"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"152-S24QAk8Zee8hhcP1eH85D2IPi8w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 May 2022 10:51:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"bulb\",\n    \"description\": \"bulb\",\n    \"nftImage\": \"waste.png\",\n    \"nftCollection\": [\n        \"6295edd6652096d0b4a41fb7\"\n    ],\n    \"status\": true,\n    \"price\": 3000,\n    \"isSold\": false,\n    \"saleType\": \"bid\",\n    \"startingtime\": \"2022-05-31T10:50:21.013Z\",\n    \"endingtime\": \"2022-05-31T11:50:21.013Z\",\n    \"biders\": [],\n    \"_id\": \"6295f34c387de859381ba16f\",\n    \"bidingtime\": \"2022-05-31T10:51:56.855Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

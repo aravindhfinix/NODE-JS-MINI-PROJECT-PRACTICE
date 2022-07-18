@@ -1,0 +1,1715 @@
+{
+	"info": {
+		"_postman_id": "6e4a2f15-37aa-4cb0-bade-89213b911a49",
+		"name": "BookMyShow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user api",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"name\":\"aravindh\",\r\n    \"password\":\"aravi@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:4000/user/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"name\":\"aravindh\",\r\n    \"password\":\"aravi@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-GjfZY3EwUY5VF2GZFPjf2mwC9ss\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 05:51:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"aravindh@sparkouttech.com\",\n    \"name\": \"aravindh\",\n    \"password\": \"$2b$10$PNfzRXkljDTLTUMTcs3MKeykDPCvIsTL0qyHvjw9TdDs3QM0TaVfG\",\n    \"otp\": 4000,\n    \"_id\": \"62624244e7e28ac714a2f6a2\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "verify otp",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"otp\":4000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"verify"
+							]
+						},
+						"description": "verifying otp"
+					},
+					"response": [
+						{
+							"name": "http://localhost:4000/user/verify",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"otp\":4000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/verify",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"verify"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e-R6RNRswReQw+Xqr2mm1CA+UD5Nw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 05:55:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "signup success"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"password\":\"aravi@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "login and create token"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"password\":\"aravi@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-XLHo8+7kR4zKwxS0MH+jUILxlEk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 06:00:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Auth Successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MjYyNDI0NGU3ZTI4YWM3MTRhMmY2YTIiLCJpYXQiOjE2NTA2MDcyMTUsImV4cCI6MTY1MDYxMDgxNX0.63xdstcRtGzxMv7R-qP7npSbFtL5hD3uXGXu12P7KNk\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update user detailes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"aravindh d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/update/62624244e7e28ac714a2f6a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"update",
+								"62624244e7e28ac714a2f6a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleting the user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/user/delete/62624244e7e28ac714a2f6a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"delete",
+								"62624244e7e28ac714a2f6a2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleting the user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/user/delete/62624244e7e28ac714a2f6a2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"user",
+										"delete",
+										"62624244e7e28ac714a2f6a2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 07:13:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "theater api",
+			"item": [
+				{
+					"name": "creating theaters",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamalam\",\r\n    \"location\":\"cuddalore\",\r\n    \"ac\":\"yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/theater/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"theater",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "creating theaters",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"kamalam\",\r\n    \"location\":\"cuddalore\",\r\n    \"ac\":\"yes\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/theater/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"theater",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "105"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"69-tAD0bnGdYZv46DBVcGEmWWiRwfM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 07:26:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"kamalam\",\n    \"location\": \"cuddalore\",\n    \"ac\": \"yes\",\n    \"movies\": [],\n    \"_id\": \"626258c1ddc9b9080f2a5820\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update the movies running in theater by linking movies and theater collec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"626258c1ddc9b9080f2a5820\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/theater/find/626258c1ddc9b9080f2a5820",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"theater",
+								"find",
+								"626258c1ddc9b9080f2a5820"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update the movies running in theater by linking movies and theater collec",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"626258c1ddc9b9080f2a5820\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/theater/find/kamalam",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"theater",
+										"find",
+										"kamalam"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "185"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b9-qsf9XQegCXRcvXELwdN9akqwf80\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 09:47:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"626258c1ddc9b9080f2a5820\",\n    \"name\": \"kamalam\",\n    \"location\": \"cuddalore\",\n    \"ac\": \"yes\",\n    \"movies\": [\n        \"6262625ad63c0f1cd6c8b5e9\",\n        \"6262628dd63c0f1cd6c8b5ec\",\n        \"62626297d63c0f1cd6c8b5ef\"\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "populating the movies connected to theater",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/theater/populate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"theater",
+								"populate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "populating the movies connected to theater",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/theater",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"theater"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "487"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e7-u079XontBw976nCaBwB8xxhZNd4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 09:52:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"626258c1ddc9b9080f2a5820\",\n        \"name\": \"kamalam\",\n        \"location\": \"cuddalore\",\n        \"ac\": \"yes\",\n        \"movies\": [\n            {\n                \"_id\": \"6262625ad63c0f1cd6c8b5e9\",\n                \"name\": \"beast\",\n                \"language\": \"tamil\",\n                \"theaters\": \"626258c1ddc9b9080f2a5820\",\n                \"screen\": \"1\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6262628dd63c0f1cd6c8b5ec\",\n                \"name\": \"kgf2\",\n                \"language\": \"tamil\",\n                \"theaters\": \"626258c1ddc9b9080f2a5820\",\n                \"screen\": \"2\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"62626297d63c0f1cd6c8b5ef\",\n                \"name\": \"k2k\",\n                \"language\": \"tamil\",\n                \"theaters\": \"626258c1ddc9b9080f2a5820\",\n                \"screen\": \"3\",\n                \"__v\": 0\n            }\n        ],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "finding theater by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/theater/find/kamalam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"theater",
+								"find",
+								"kamalam"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "finding theater by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/theater/find/kamalam",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"theater",
+										"find",
+										"kamalam"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "185"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b9-qsf9XQegCXRcvXELwdN9akqwf80\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 09:54:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"626258c1ddc9b9080f2a5820\",\n    \"name\": \"kamalam\",\n    \"location\": \"cuddalore\",\n    \"ac\": \"yes\",\n    \"movies\": [\n        \"6262625ad63c0f1cd6c8b5e9\",\n        \"6262628dd63c0f1cd6c8b5ec\",\n        \"62626297d63c0f1cd6c8b5ef\"\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "movie api",
+			"item": [
+				{
+					"name": "create movies with theater id's",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"beast\",\r\n    \"language\":\"tamil\",\r\n    \"theaters\":\"kamalam\",\r\n    \"screen\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/movie/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"movie",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create movies with theater id's",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"beast\",\r\n    \"language\":\"tamil\",\r\n    \"theaters\":\"kamalam\",\r\n    \"screen\":1\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/movie/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"movie",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-fbofXpftqTud3+EJXlW+nIZ9DxY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 08:07:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"beast\",\n    \"language\": \"tamil\",\n    \"theaters\": \"626258c1ddc9b9080f2a5820\",\n    \"screen\": \"1\",\n    \"_id\": \"6262625ad63c0f1cd6c8b5e9\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "find by id and update movies details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"language\":\"telugu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/movie/update/625aaeb86c42ea00028ea3f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"movie",
+								"update",
+								"625aaeb86c42ea00028ea3f5"
+							]
+						},
+						"description": "like language etc"
+					},
+					"response": [
+						{
+							"name": "find by id and update movies details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"language\":\"telugu\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/movie/kgf2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"movie",
+										"kgf2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-MIafUFPawDhR9b4ifba7Q7Y7F+E\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:00:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6262628dd63c0f1cd6c8b5ec\",\n    \"name\": \"kgf2\",\n    \"language\": \"telugu\",\n    \"theaters\": \"626258c1ddc9b9080f2a5820\",\n    \"screen\": \"2\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "display all movies in home ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/movie/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"movie",
+								"home"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "display all movies in home ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/movie/home",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"movie",
+										"home"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17f-R2zW61wsanucBDkRf2Ps+PYd8NU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:04:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6262625ad63c0f1cd6c8b5e9\",\n        \"name\": \"beast\",\n        \"language\": \"tamil\",\n        \"theaters\": \"626258c1ddc9b9080f2a5820\",\n        \"screen\": \"1\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6262628dd63c0f1cd6c8b5ec\",\n        \"name\": \"kgf2\",\n        \"language\": \"telugu\",\n        \"theaters\": \"626258c1ddc9b9080f2a5820\",\n        \"screen\": \"2\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"62626297d63c0f1cd6c8b5ef\",\n        \"name\": \"k2k\",\n        \"language\": \"tamil\",\n        \"theaters\": \"626258c1ddc9b9080f2a5820\",\n        \"screen\": \"3\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "finding movie by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/movie/kgf2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"movie",
+								"kgf2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "finding movie by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/movie/kgf2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"movie",
+										"kgf2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-MIafUFPawDhR9b4ifba7Q7Y7F+E\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:05:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6262628dd63c0f1cd6c8b5ec\",\n    \"name\": \"kgf2\",\n    \"language\": \"telugu\",\n    \"theaters\": \"626258c1ddc9b9080f2a5820\",\n    \"screen\": \"2\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "seat api",
+			"item": [
+				{
+					"name": "creating seats via movie screen and time with status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"seatnumber\":1,\r\n    \"status\":\"free\",\r\n   \"screen\":1,\r\n   \"time\":\"10:30 Am\",\r\n   \"movie\":\"beast\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/seats/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"seats",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "creating seats via movie screen and time with status",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\"seatnumber\":1,\r\n    \"status\":\"free\",\r\n   \"screen\":1,\r\n   \"time\":\"10:30 Am\",\r\n   \"movie\":\"beast\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/seats/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-wXtEg7G0BBwkFEYNyInDy5y8mdM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:16:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"seatnumber\": 1,\n    \"status\": \"free\",\n    \"screen\": 1,\n    \"time\": \"10:30 Am\",\n    \"movie\": {\n        \"_id\": \"6262625ad63c0f1cd6c8b5e9\",\n        \"name\": \"beast\",\n        \"language\": \"tamil\",\n        \"theaters\": \"626258c1ddc9b9080f2a5820\",\n        \"screen\": \"1\",\n        \"__v\": 0\n    },\n    \"_id\": \"626280873789285ef02d99ec\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "changing seat status by owner",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"status\":\"damaged\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/seats/update/6262815a981967828d54f94f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"seats",
+								"update",
+								"6262815a981967828d54f94f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "changing seat status by owner",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"status\":\"damaged\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/seats/selectingseats/6262815a981967828d54f94f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"selectingseats",
+										"6262815a981967828d54f94f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c-IYerCCF3PrVzpkqyYAVYLK3sSEs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:28:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6262815a981967828d54f94f\",\n    \"seatnumber\": 6,\n    \"status\": \"damaged\",\n    \"screen\": 1,\n    \"time\": \"10:30 Am\",\n    \"movie\": \"6262625ad63c0f1cd6c8b5e9\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "showing all seats by movie and time for booking",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"time\":\"10:30 Am\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/seats/showallseats/6262625ad63c0f1cd6c8b5e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"seats",
+								"showallseats",
+								"6262625ad63c0f1cd6c8b5e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "available seats and booked sets selection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/seats/selectingseats/6262815a981967828d54f94f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"seats",
+								"selectingseats",
+								"6262815a981967828d54f94f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "free seat",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/seats/selectingseats/62628140981967828d54f943",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"selectingseats",
+										"62628140981967828d54f943"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"89-LhHBZGjQTzop9qqruavS4m9cytI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:57:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62628140981967828d54f943\",\n    \"seatnumber\": 2,\n    \"status\": \"free\",\n    \"screen\": 1,\n    \"time\": \"10:30 Am\",\n    \"movie\": \"6262625ad63c0f1cd6c8b5e9\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "unavailable seats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/seats/selectingseats/6262815a981967828d54f94f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"selectingseats",
+										"6262815a981967828d54f94f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12-7roR3FuZ8dqg7fmro0uWLczXdzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 10:59:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "seat not available"
+						}
+					]
+				},
+				{
+					"name": "booking ticket",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MjYyNDI0NGU3ZTI4YWM3MTRhMmY2YTIiLCJpYXQiOjE2NTA2MjU3MTgsImV4cCI6MTY1MDYyOTMxOH0.5dKVjn7IdnBBfkB9kWjNyho2lZZ056grO98CRxp58ik",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/seats/booked/62628140981967828d54f943",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"seats",
+								"booked",
+								"62628140981967828d54f943"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "without auth",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/seats/booked",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"booked"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b-vdbCRHEl3J3b81u/YMssBiTkS2w\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 11:04:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"invalid token\"\n}"
+						},
+						{
+							"name": "tickets booked and mail sent to the booked user",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MjYyNDI0NGU3ZTI4YWM3MTRhMmY2YTIiLCJpYXQiOjE2NTA2MjU3MTgsImV4cCI6MTY1MDYyOTMxOH0.5dKVjn7IdnBBfkB9kWjNyho2lZZ056grO98CRxp58ik",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/seats/booked/62628140981967828d54f943",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"booked",
+										"62628140981967828d54f943"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-PJZg7ET6QYDtiFHqs7wcyIWBeY8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 11:22:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62628140981967828d54f943\",\n    \"seatnumber\": 2,\n    \"status\": \"booked\",\n    \"screen\": 1,\n    \"time\": \"10:30 Am\",\n    \"movie\": \"6262625ad63c0f1cd6c8b5e9\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "succesfull booking",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MjYyNDI0NGU3ZTI4YWM3MTRhMmY2YTIiLCJpYXQiOjE2NTA2MjU3MTgsImV4cCI6MTY1MDYyOTMxOH0.5dKVjn7IdnBBfkB9kWjNyho2lZZ056grO98CRxp58ik",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/seats/booked/62628140981967828d54f943",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"booked",
+										"62628140981967828d54f943"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-PJZg7ET6QYDtiFHqs7wcyIWBeY8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 11:25:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62628140981967828d54f943\",\n    \"seatnumber\": 2,\n    \"status\": \"booked\",\n    \"screen\": 1,\n    \"time\": \"10:30 Am\",\n    \"movie\": \"6262625ad63c0f1cd6c8b5e9\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "payments failed in middleware",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MjYyNDI0NGU3ZTI4YWM3MTRhMmY2YTIiLCJpYXQiOjE2NTA2MjU3MTgsImV4cCI6MTY1MDYyOTMxOH0.5dKVjn7IdnBBfkB9kWjNyho2lZZ056grO98CRxp58ik",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/seats/booked/62628140981967828d54f943",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"seats",
+										"booked",
+										"62628140981967828d54f943"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e-W7kESe+0rt2NlCyAInXa12UoubI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 22 Apr 2022 11:29:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "payment failed"
+						}
+					]
+				}
+			]
+		}
+	]
+}

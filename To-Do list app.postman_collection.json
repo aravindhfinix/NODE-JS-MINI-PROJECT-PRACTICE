@@ -1,0 +1,1773 @@
+{
+	"info": {
+		"_postman_id": "eb33ebdf-d9c2-432c-86f2-139e974909b7",
+		"name": "To-Do list app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"name\":\"aravindh\",\r\n    \"password\":\"aravi@123\",\r\n    \"confirmPassword\":\"aravi@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bloodalchemist6@gmail.com\",\r\n    \"name\":\"bloodalchemist\",\r\n    \"password\":\"blood@123\",\r\n    \"confirmPassword\":\"blood@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/signup",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "296"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"128-E4RvROFwTJaVkvJ3/PZEk+Pa1Ns\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 09:50:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"created\",\n    \"user\": {\n        \"email\": \"bloodalchemist6@gmail.com\",\n        \"name\": \"bloodalchemist\",\n        \"password\": \"$2b$10$LSAP1GNrj/1cLOoGzD3lPuOJ8/3rDUE4/hU71ZQUk7tnxIVH0T96a\",\n        \"confirmPassword\": \"$2b$10$LSAP1GNrj/1cLOoGzD3lPuOJ8/3rDUE4/hU71ZQUk7tnxIVH0T96a\",\n        \"otp\": 4676,\n        \"_id\": \"62a070cd53c2b0b5e22b66f8\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "otp verified success signup",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"otp\":567\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/v1.0.0/verify",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"v1.0.0",
+										"verify"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "otp verified success signup",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"bloodalchemist6@gmail.com\",\r\n    \"otp\":6216\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/v1.0.0/verify",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"v1.0.0",
+												"verify"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "14"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e-R6RNRswReQw+Xqr2mm1CA+UD5Nw\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 06:32:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "signup success"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "login v1.0.0",
+					"item": [
+						{
+							"name": "login 1.0.0",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"password\":\"aravi@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/v1.0.0/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"v1.0.0",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login after otp verification",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n     \"email\":\"aravindfinix@gmail.com\",\r\n    \"password\":\"finix@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/v1.0.0/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"v1.0.0",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "227"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e3-4PHiaQM551Jp/jWTHc/d2pHsIwg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 11:04:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRmaW5peEBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MmEwODFiZDNjYjI0ZmIzYTMzZTdjZTMiLCJpYXQiOjE2NTQ2ODYyNjAsImV4cCI6MTY1NDY4OTg2MH0.MpGyM3EDONuhAUPmymK8awQb0MMwCjDTPyAANxYgVVA"
+								},
+								{
+									"name": "login before otp verification",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n     \"email\":\"aravindfinix@gmail.com\",\r\n    \"password\":\"finix@123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/v1.0.0/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"v1.0.0",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "25"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"19-WQo7qKFK0o9HdzvdOK+svk7nSFM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 11:05:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "otp verification not done"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "login v1.0.1",
+					"item": [
+						{
+							"name": "login v1.0.1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/v1.0.1/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"v1.0.1",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "otp sent",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"mohanapriyavidhun0105@gmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/v1.0.1/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"v1.0.1",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "8"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"8-ErTGBbm9AbftTHiTAXyO53uwUkM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 04:57:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "otp sent"
+								}
+							]
+						},
+						{
+							"name": "verify otp and login token v1.0.1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"aravindh@sparkouttech.com\",\r\n    \"otp\":5424\r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/v1.0.1/verify",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"v1.0.1",
+										"verify"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "otp wrong",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"mohanapriyavidhun0105@gmail.com\",\r\n    \"otp\":4510\r\n\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/v1.0.1/verify",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"v1.0.1",
+												"verify"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "19"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"13-PD2ZXT2VWGSgRekox6r7DWN+Zx8\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 04:58:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "wrong otp try again"
+								},
+								{
+									"name": "sucessfull login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"mohanapriyavidhun0105@gmail.com\",\r\n    \"otp\":4783\r\n\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/v1.0.1/verify",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"v1.0.1",
+												"verify"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "224"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e0-otkexL+Pbr5C3gHlkNuiJY8IVOk\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 04:59:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Auth Successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFuYXByaXlhdmlkaHVuMDEwNUBnbWFpbC5jb20iLCJpYXQiOjE2NTQ2NjQzNjIsImV4cCI6MTY1NDY2Nzk2Mn0._LLvyQr0hRFjBo0tKQV86blMZvUd0jmi8NsgiXOGyfw\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "updating and deleting user detailes",
+					"item": [
+						{
+							"name": "update user detailes",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"mp\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/update/62a06f3c1c01df8bc4ef6b5a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"update",
+										"62a06f3c1c01df8bc4ef6b5a"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update user detailes",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"mp\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/update/62a06f3c1c01df8bc4ef6b5a",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"update",
+												"62a06f3c1c01df8bc4ef6b5a"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "251"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"fb-3QpRvCt1MkbXtrjIxHzV6pxPd/Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 11:31:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_id\": \"62a06f3c1c01df8bc4ef6b5a\",\n    \"email\": \"mohanapriyavidhun0105@gmail.com\",\n    \"name\": \"mp\",\n    \"password\": \"$2b$10$i2326vQRhMnt1EfZ3Lv3RedhxUJvt10JEhynMWQGLXwh3U2tPLwjK\",\n    \"confirmPassword\": \"$2b$10$i2326vQRhMnt1EfZ3Lv3RedhxUJvt10JEhynMWQGLXwh3U2tPLwjK\",\n    \"__v\": 0\n}"
+								}
+							]
+						},
+						{
+							"name": "delete user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/delete/62a070cd53c2b0b5e22b66f8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"delete",
+										"62a070cd53c2b0b5e22b66f8"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/user/delete/62a081bd3cb24fb3a33e7ce3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"delete",
+												"62a081bd3cb24fb3a33e7ce3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "19"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"13-ndEqHlUkDs4b09hcACaI0QZx65k\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 11:27:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "deleted succesfully"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "creation updation deletion",
+					"item": [
+						{
+							"name": "create task",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJpYXQiOjE2NTQ3NTcxMDIsImV4cCI6MTY1NDc2MDcwMn0.aZxADj9w_SypYi26DK_haSNwARYG3fpmEAve97mJSGw",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"userName\":\"aravindh\",\r\n    \"taskName\":\"insta\",\r\n    \"taskDetailes\":\"to create insta clone app\",\r\n    \"taskDue\":\"24/6/2022\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/todo/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"todo",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "without auth",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRmaW5peEBnbWFpbC5jb20iLCJ1c2VySWQiOiI2MmEwODFiZDNjYjI0ZmIzYTMzZTdjZTMiLCJpYXQiOjE2NTQ2ODYyNjAsImV4cCI6MTY1NDY4OTg2MH0.MpGyM3EDONuhAUPmymK8awQb0MMwCjDTPyAANxYgVVA",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"userName\":\"aravindh\",\r\n    \"taskName\":\"insta\",\r\n    \"taskDetailes\":\"to create insta clone app\",\r\n    \"taskDue\":\"24/6/2022\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"create"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 06:40:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "12"
+										}
+									],
+									"cookie": [],
+									"body": "Unauthorized"
+								},
+								{
+									"name": "create task with succesfull auth",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJpYXQiOjE2NTQ3NTcxMDIsImV4cCI6MTY1NDc2MDcwMn0.aZxADj9w_SypYi26DK_haSNwARYG3fpmEAve97mJSGw",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"userName\":\"aravindh\",\r\n    \"taskName\":\"insta\",\r\n    \"taskDetailes\":\"to create insta clone app\",\r\n    \"taskDue\":\"24/6/2022\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "218"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"da-pmCYQreSh+a4hX9ySegTqbZST7o\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 06:45:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"task created\",\n    \"task\": {\n        \"userName\": \"aravindh\",\n        \"userId\": [\n            \"62a1946d10e044086de30787\"\n        ],\n        \"taskName\": \"insta\",\n        \"taskDue\": \"24/6/2022\",\n        \"taskCreatedAt\": \"9/6/2022\",\n        \"status\": false,\n        \"_id\": \"62a1971a570870ae6567a177\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updating tasks",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/todo/update/629df5002e26f7997fb43db2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"todo",
+										"update",
+										"629df5002e26f7997fb43db2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "if tak not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\":true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/update/629df5002e26f7997fb43db4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"update",
+												"629df5002e26f7997fb43db4"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "9"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"9-CUt2O0z8wLBeXQQFgc1RPDyggGc\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Jun 2022 06:59:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "not found"
+								},
+								{
+									"name": "updating tasks",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\":true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/update/62a10ac22569430bf508972b",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"update",
+												"62a10ac22569430bf508972b"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "77"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"4d-78Ofei9ujDjjqbid2jQAfih52Kg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 21:09:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"task updated\",\n    \"updatedAt\": {\n        \"date\": \"9/6/2022\",\n        \"time\": \"2:30:20 am\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleting a task",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/todo/delete/629df5aa2e26f7997fb43db5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"todo",
+										"delete",
+										"629df5aa2e26f7997fb43db5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "deleting a task",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/todo/delete/629df5aa2e26f7997fb43db5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"delete",
+												"629df5aa2e26f7997fb43db5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "19"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"13-0yfjbBDuCMiD4ACXiNTgmq7ty1w\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 07:11:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "sucessfully deleted"
+								}
+							]
+						},
+						{
+							"name": "comment on task",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MmExOTQ2ZDEwZTA0NDA4NmRlMzA3ODciLCJpYXQiOjE2NTQ3NTczNTYsImV4cCI6MTY1NDc2MDk1Nn0.xitbG8IveZxhKFGU030KYiZWW2UyZ6AY7UuVbAfWPcw",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"comment\":\"complete as soon as possible\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/todo/comment/62a1971a570870ae6567a177",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"todo",
+										"comment",
+										"62a1971a570870ae6567a177"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "without auth",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"comment\":\"complete as soon as possible\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/comment/62a1971a570870ae6567a177",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"comment",
+												"62a1971a570870ae6567a177"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "27"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1b-vdbCRHEl3J3b81u/YMssBiTkS2w\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 06:47:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"invalid token\"\n}"
+								},
+								{
+									"name": "comment on task with auth",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXZpbmRoQHNwYXJrb3V0dGVjaC5jb20iLCJ1c2VySWQiOiI2MmExOTQ2ZDEwZTA0NDA4NmRlMzA3ODciLCJpYXQiOjE2NTQ3NTczNTYsImV4cCI6MTY1NDc2MDk1Nn0.xitbG8IveZxhKFGU030KYiZWW2UyZ6AY7UuVbAfWPcw",
+												"type": "default"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"comment\":\"complete as soon as possible\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/comment/62a1971a570870ae6567a177",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"comment",
+												"62a1971a570870ae6567a177"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "71"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"47-ValRiGptpUU7845Qei8NWHu93y8\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 06:51:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"comment added\",\n    \"commentMade\": \"complete as soon as possible\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "quering req task or get todays task and send EOD mail",
+					"item": [
+						{
+							"name": "previous tasks and and today tasks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"taskCreatedAt\":\"9/6/2022\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/todo/taskList",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"todo",
+										"taskList"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "previous tasks",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tasktiming\":\"2022-06-04T11:00:24.125+00:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/previous",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"previous"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "420"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1a4-1xLUFOblQ2/DI72mnARjfj+sfSY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Jun 2022 12:44:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"629df5002e26f7997fb43db2\",\n        \"username\": \"629def0b751b5faa21829fb0\",\n        \"taskname\": \"booking api\",\n        \"taskdetailes\": \"to create a ticket booking app\",\n        \"tasktiming\": \"2022-06-04T11:00:24.125Z\",\n        \"status\": false,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"629df5aa2e26f7997fb43db5\",\n        \"username\": \"629df237751b5faa21829fb3\",\n        \"taskname\": \"instagram api\",\n        \"taskdetailes\": \"to create instagram clone app\",\n        \"tasktiming\": \"2022-06-04T11:00:24.125Z\",\n        \"status\": false,\n        \"__v\": 0\n    }\n]"
+								},
+								{
+									"name": "todays tasks",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/taskList",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"taskList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "616"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"268-UboAfQE1tTox+P3iFfLGWCt3fiE\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 20:49:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"results\": \"found todays tasks\",\n    \"TodaysTasks\": [\n        {\n            \"_id\": \"62a10a9d2569430bf5089728\",\n            \"userName\": \"aravindh\",\n            \"userId\": [\n                \"62a06d611c01df8bc4ef6b57\"\n            ],\n            \"taskName\": \"book my show api\",\n            \"taskDue\": \"20/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62a10ac22569430bf508972b\",\n            \"userName\": \"aravindh\",\n            \"userId\": [\n                \"62a06d611c01df8bc4ef6b57\"\n            ],\n            \"taskName\": \"nft market\",\n            \"taskDue\": \"20/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62a10ae42569430bf5089731\",\n            \"userName\": \"mp\",\n            \"userId\": [\n                \"62a06f3c1c01df8bc4ef6b5a\"\n            ],\n            \"taskName\": \"insta\",\n            \"taskDue\": \"24/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+								},
+								{
+									"name": "requested day tasks",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"taskCreatedAt\":\"9/6/2022\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/taskList",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"taskList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "625"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"271-wxGT0qIEFfMqieof2MpV3EYlY5U\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 20:51:17 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"results\": \"found requested day tasks\",\n    \"previousTasks\": [\n        {\n            \"_id\": \"62a10a9d2569430bf5089728\",\n            \"userName\": \"aravindh\",\n            \"userId\": [\n                \"62a06d611c01df8bc4ef6b57\"\n            ],\n            \"taskName\": \"book my show api\",\n            \"taskDue\": \"20/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62a10ac22569430bf508972b\",\n            \"userName\": \"aravindh\",\n            \"userId\": [\n                \"62a06d611c01df8bc4ef6b57\"\n            ],\n            \"taskName\": \"nft market\",\n            \"taskDue\": \"20/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62a10ae42569430bf5089731\",\n            \"userName\": \"mp\",\n            \"userId\": [\n                \"62a06f3c1c01df8bc4ef6b5a\"\n            ],\n            \"taskName\": \"insta\",\n            \"taskDue\": \"24/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+								},
+								{
+									"name": "see pending requested day tasks",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"taskCreatedAt\":\"9/6/2022\",\r\n    \"status\":false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/taskList",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"taskList"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "442"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1ba-TGVEd8cwWrmePSzbDLqFnbrKyuo\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Jun 2022 21:16:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"results\": \"found requested day pending tasks\",\n    \"previousTasks\": [\n        {\n            \"_id\": \"62a10a9d2569430bf5089728\",\n            \"userName\": \"aravindh\",\n            \"userId\": [\n                \"62a06d611c01df8bc4ef6b57\"\n            ],\n            \"taskName\": \"book my show api\",\n            \"taskDue\": \"20/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"62a10ae42569430bf5089731\",\n            \"userName\": \"mp\",\n            \"userId\": [\n                \"62a06f3c1c01df8bc4ef6b5a\"\n            ],\n            \"taskName\": \"insta\",\n            \"taskDue\": \"24/6/2022\",\n            \"taskCreatedAt\": \"9/6/2022\",\n            \"status\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "EOD email notification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/todo/mail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"todo",
+										"mail"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "EOD email notification",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/todo/mail",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"todo",
+												"mail"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-BKY/F/ufMiQ/U8IR1D3Q7qiX1wk\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Jun 2022 06:50:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "EOD status sent "
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
